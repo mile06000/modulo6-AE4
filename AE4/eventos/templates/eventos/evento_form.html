@@ -1,0 +1,18 @@
+{% extends "eventos/base.html" %}
+
+{% block title %}Registrar Evento{% endblock %}
+
+{% block content %}
+<div class="card p-4 shadow-sm">
+
+   <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+</form>
+
+
+</div>
+{% endblock %}
+
